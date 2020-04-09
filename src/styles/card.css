@@ -1,0 +1,113 @@
+.card {
+  display: inline-block;
+  width: 80%;
+  border-color: #3a3664;
+  border: 1px solid #3a3664;
+  border-radius: 6px;
+  max-width: 20rem;
+  margin: 20px 0;
+  font-size: 1rem;
+  text-decoration: none;
+  overflow: hidden;
+  box-shadow: 3px 2px 3rem -1rem rgba(122, 118, 181, 0.5);
+  transition: transform 0.1s ease-in-out, box-shadow 0.1s;
+  background: #3a3664;
+  background-color: #3a3664;
+}
+
+.card:hover .hovershow {
+  display: block;
+}
+
+.card:hover {
+  background: rgba(122, 118, 181, 0.5);
+  transform: translateY(-0.5rem) scale(1.0125);
+  box-shadow: 0 0.5em 3rem -1rem rgba(0, 0, 0, 0.5);
+}
+
+.card .hovershow {
+  display: none;
+  position: absolute;
+  margin: 20px auto;
+  height: 100%;
+  width: 100%;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.hovershow button {
+  display: block;
+  margin: 15px auto;
+  height: 40px;
+  width: 80%;
+  padding: 10px;
+  border-radius: 6px;
+  background: rgba(0, 0, 0, 1);
+  background-color: #f0f1f6;
+  font-size: 16px;
+  opacity: 1;
+  color: #3a3664;
+  border: 1px solid #3a3664;
+  box-shadow: 3px 2px 3rem -1rem rgba(122, 118, 181, 0.5);
+}
+
+.card:hover button:hover {
+  cursor: pointer;
+  opacity: 1;
+  background: rgba(122, 118, 181, 1);
+  color: #fff;
+}
+
+.card-image {
+  display: block;
+  min-height: 15rem; /* layout hack */
+  background: #3a3664 center center no-repeat;
+  background-size: cover;
+  opacity: 1;
+  transition: opacity 0.25s ease-in-out;
+  -moz-transition: opacity 0.25s ease-in-out;
+  -webkit-transition: opacity 0.25s ease-in-out;
+}
+
+/* Layout Styles */
+
+.card-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-items: center;
+  margin: auto;
+  padding: 0;
+  font-size: 0;
+  text-align: center;
+  list-style: none;
+}
+
+.card-description {
+  display: block;
+  padding: 1em 0.5em;
+  color: #e1e5e9;
+  text-decoration: none;
+}
+
+.card-description > h3 {
+  margin: 0 0 0.5em;
+  text-shadow: 4px 4px #333;
+}
+
+.card-description > p {
+  margin: 0;
+}
+
+/* Medium Screens */
+@media (max-width: 800px) {
+  .card-list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Small Screens */
+@media (max-width: 560px) {
+  .card-list {
+    grid-template-columns: 1fr;
+  }
+}
