@@ -1,0 +1,25 @@
+.services {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.9), #605ba7);
+  margin-bottom: 0;
+}
+
+.grid-2-p {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+}
+.grid-3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+}
+
+.center {
+  text-align: center;
+  margin: auto;
+}

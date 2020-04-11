@@ -16,11 +16,69 @@ import {
 import { Link } from "react-router-dom";
 
 class Main extends React.Component {
+  state = {
+    classContact: "",
+    classProjects: ""
+  };
+  showContact = () => {
+    if (this.state.classContact == "") {
+      this.setState({
+        classContact: "show"
+      });
+    } else {
+      this.setState({
+        classContact: ""
+      });
+    }
+    console.log(this.state.classContact);
+  };
+
+  showProjects = () => {
+    if (this.state.classProjects == "") {
+      this.setState({
+        classProjects: "show"
+      });
+    } else {
+      this.setState({
+        classProjects: ""
+      });
+    }
+    console.log(this.state.classProjects);
+  };
   render() {
     return (
       <>
+        <nav>
+          <div>
+            <div className="logo"></div>
+            <span>Portfolio Page</span>
+          </div>
+          <div className="nav-pages">
+            <a href="/">Home</a>
+            <a href="/about">About Me</a>
+            <a href="/resume">Resume</a>
+            <a href="/contact">Contact</a>
+            <a href="/projects">Projects</a>
+          </div>
+        </nav>
         <div className="body">
           <header className="showcase">
+            <button onClick={this.showContact} id="btn-contact">
+              {" "}
+              Contact Me
+            </button>
+            <div className={`contact-form fadeIn ${this.state.classContact}`}>
+              <div className="contact-info">
+                <h3>Contact Me </h3>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Voluptatem nesciunt commodi quidem quam iste eos illo molestias,
+                sit, ut at officiis qui! Rerum, atque? Vel iste, expedita
+                impedit minima asperiores, similique illo ducimus, nemo aut
+                atque voluptates distinctio iusto consequuntur.
+              </div>
+              <div className="bubble-arrow-border"></div>
+              <div className="bubble-arrow"></div>
+            </div>
             <div className="content">
               <img
                 src="https://imagehost.imageupload.net/2020/03/30/logo_D_D.png"
@@ -57,6 +115,21 @@ class Main extends React.Component {
                 />
               </div>
             </div>
+            <div className={`project-form ${this.state.classProjects}`}>
+              <div>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Accusantium, tenetur, deserunt. Dignissimos dolores ut tenetur
+                enim ipsum, deleniti autem temporibus quos numquam, nihil
+                commodi. Magni animi modi eos quaerat nulla, est, odit similique
+                commodi maxime at, nesciunt, vel delectus libero!
+              </div>
+              <div className="bubble-arrow-border"></div>
+              <div className="bubble-arrow"></div>
+            </div>
+            <button onClick={this.showProjects} id="btn-projects">
+              {" "}
+              Projects{" "}
+            </button>
           </header>
           <section className="services">
             <div className="container grid-3 center">
@@ -84,137 +157,6 @@ class Main extends React.Component {
               </div>
             </div>
           </section>
-
-          <section className="projects">
-            <h2> Projects Build </h2>
-
-            <ul className="card-list">
-              <li className="card">
-                <div className="hovershow">
-                  <a
-                    href="https://airbnbclone-client.herokuapp.com/"
-                    target="_blank"
-                  >
-                    <button>Show App!</button>
-                  </a>
-                  <a
-                    href="https://github.com/Davoshy/04-airbnb-api"
-                    target="_blank"
-                  >
-                    <button>Server Code</button>
-                  </a>
-
-                  <a
-                    href="https://github.com/Davoshy/04-airbnb-client"
-                    target="_blank"
-                  >
-                    <button>Client Code</button>
-                  </a>
-                </div>
-                <div
-                  className="card-image"
-                  style={{
-                    backgroundImage: `url(
-                            "https://i.pinimg.com/originals/56/78/7f/56787f4caf0c7764457a10844c45013c.jpg"
-                          )`
-                  }}
-                ></div>
-                <div className="card-description">
-                  <h2>AirBnb Clone</h2>
-                  <p>React.js, Node.js, MongoDB</p>
-                </div>
-              </li>
-
-              <li className="card">
-                <div className="hovershow">
-                  <a href="https://balieats.herokuapp.com/" target="_blank">
-                    <button> Show App!</button>
-                  </a>
-                  <a href="https://github.com/Davoshy/balideli" target="_blank">
-                    <button>Server Code</button>
-                  </a>
-
-                  <a
-                    href="https://github.com/Davoshy/balideli-client"
-                    target="_blank"
-                  >
-                    <button>Client Code</button>
-                  </a>
-                </div>
-                <div
-                  className="card-image"
-                  style={{
-                    backgroundImage: `url("https://previews.123rf.com/images/miracel123/miracel1231801/miracel123180100095/94124044-food-delivery-logo.jpg")`
-                  }}
-                ></div>
-                <div className="card-description">
-                  <h2>Bali Delivery App</h2>
-                  <p>React.js, Node.js, MongoDB</p>
-                </div>
-              </li>
-
-              <li className="card">
-                <div className="hovershow">
-                  <button> Show App!</button>
-                  <a href="https://github.com/Davoshy/balideli" target="_blank">
-                    <button>Server Code</button>
-                  </a>
-
-                  <a
-                    href="https://github.com/Davoshy/balideli-client"
-                    target="_blank"
-                  >
-                    <button>Client Code</button>
-                  </a>
-                </div>
-                <div
-                  className="card-image"
-                  style={{
-                    backgroundImage: `url("https://www.smartsuppcdn.com/assets/img/illustration/png/smartsupp-chat-dashboard-sm.png")`
-                  }}
-                ></div>
-                <div className="card-description">
-                  <h2>Chat App</h2>
-                  <p>React.js, Node.js, MongoDB</p>
-                </div>
-              </li>
-
-              <li className="card">
-                <div className="hovershow">
-                  <button> Show App!</button>
-                  <a href="https://github.com/Davoshy/balideli" target="_blank">
-                    <button>Server Code</button>
-                  </a>
-
-                  <a
-                    href="https://github.com/Davoshy/balideli-client"
-                    target="_blank"
-                  >
-                    <button>Client Code</button>
-                  </a>
-                </div>
-                <div
-                  className="card-image"
-                  style={{
-                    backgroundImage: `url("https://support.apple.com/library/content/dam/edam/applecare/images/en_US/applemusic/ios13-iphone-xs-ipad-pro-music-playlists-hero.jpg")`
-                  }}
-                ></div>
-                <div className="card-description">
-                  <h2>Music App</h2>
-                  <p>React.js, Node.js, MongoDB</p>
-                </div>
-              </li>
-            </ul>
-          </section>
-          <section className="about bg-light grid-2">
-            <div className="container">
-              <div className="center">
-                <h2>About Me</h2>
-              </div>
-            </div>
-            <div></div>
-          </section>
-
           <footer className="center bg-dark">
             <p>David Doan &copy; 2020</p>
           </footer>
