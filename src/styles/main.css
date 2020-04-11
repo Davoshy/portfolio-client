@@ -125,7 +125,7 @@ nav .nav-pages {
   z-index: 1;
   box-sizing: border-box;
   margin-top: 105px;
-  padding: 20px 20px 0px 20px;
+  padding: 30px 20px 0px 40px;
 }
 
 .contact-form .bubble-arrow-border {
@@ -152,6 +152,23 @@ nav .nav-pages {
   left: 110px;
 }
 
+.contact-info {
+  display: inline-block;
+}
+
+.contact-info,
+.project-form h3 {
+  position: relative;
+  left: 10px;
+  color: #3a3664;
+}
+
+.contact-info span {
+  position: relative;
+  top: -15px;
+  left: 20px;
+  font-size: 20px;
+}
 .content {
   position: absolute;
   z-index: 1;
@@ -235,6 +252,27 @@ nav .nav-pages {
   opacity: 0;
   color: #333;
   z-index: 1;
+}
+
+.project-form h3 {
+  text-align: center;
+}
+.project-form > a {
+  display: block;
+  width: 60%;
+  height: 40px;
+  border-radius: 10px;
+  margin: 35px auto;
+  text-align: center;
+  padding-top: 15px;
+  color: #3a3664;
+  background-color: #bdc7d5;
+  box-shadow: 0 0 5px #333;
+}
+
+.project-form > a:hover {
+  background-color: rgba(57, 52, 99, 0.5);
+  color: #fff;
 }
 
 .bubble-arrow-border {

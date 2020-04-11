@@ -10,7 +10,9 @@ import { faClipboard } from "@fortawesome/free-regular-svg-icons";
 import {
   faLaptopCode,
   faDatabase,
-  faProjectDiagram
+  faProjectDiagram,
+  faPhoneSquare,
+  faEnvelope
 } from "@fortawesome/free-solid-svg-icons";
 
 import { Link } from "react-router-dom";
@@ -64,17 +66,34 @@ class Main extends React.Component {
         <div className="body">
           <header className="showcase">
             <button onClick={this.showContact} id="btn-contact">
-              {" "}
               Contact Me
             </button>
             <div className={`contact-form fadeIn ${this.state.classContact}`}>
               <div className="contact-info">
                 <h3>Contact Me </h3>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Voluptatem nesciunt commodi quidem quam iste eos illo molestias,
-                sit, ut at officiis qui! Rerum, atque? Vel iste, expedita
-                impedit minima asperiores, similique illo ducimus, nemo aut
-                atque voluptates distinctio iusto consequuntur.
+                <FontAwesomeIcon
+                  className="icon"
+                  icon={faPhoneSquare}
+                  size="2x"
+                  style={{ color: "#3a3664" }}
+                />
+                <span>(+49) 1522 399 4176 </span>
+                <br />
+                <FontAwesomeIcon
+                  className="icon"
+                  icon={faEnvelope}
+                  size="2x"
+                  style={{ color: "#3a3664" }}
+                />
+                <span>david.doan1989@gmail.com </span>
+                <br />
+                <FontAwesomeIcon
+                  className="icon"
+                  icon={faLinkedin}
+                  size="2x"
+                  style={{ color: "#3a3664" }}
+                />
+                <span> linkedin.com/in/ddoan89/ </span>
               </div>
               <div className="bubble-arrow-border"></div>
               <div className="bubble-arrow"></div>
@@ -88,10 +107,7 @@ class Main extends React.Component {
               <div className="title">David Doan</div>
               <div className="text"> MERN Stack Web Developer</div>
               <div className="icons">
-                <a
-                  href="https://www.linkedin.com/in/david-doan-89748a75/"
-                  target="_blank"
-                >
+                <a href="https://www.linkedin.com/in/ddoan89/" target="_blank">
                   <FontAwesomeIcon
                     className="icon"
                     icon={faLinkedin}
@@ -116,13 +132,20 @@ class Main extends React.Component {
               </div>
             </div>
             <div className={`project-form ${this.state.classProjects}`}>
-              <div>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Accusantium, tenetur, deserunt. Dignissimos dolores ut tenetur
-                enim ipsum, deleniti autem temporibus quos numquam, nihil
-                commodi. Magni animi modi eos quaerat nulla, est, odit similique
-                commodi maxime at, nesciunt, vel delectus libero!
-              </div>
+              <h3> Projects </h3>
+              <a href="/projects1" alt="front projects">
+                {" "}
+                Front End Challenges
+              </a>
+              <a href="/projects2" alt="react projects">
+                {" "}
+                React Apps
+              </a>
+              <a href="/projects3" alt="game projects">
+                {" "}
+                Games
+              </a>
+
               <div className="bubble-arrow-border"></div>
               <div className="bubble-arrow"></div>
             </div>
