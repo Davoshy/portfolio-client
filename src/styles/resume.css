@@ -1,0 +1,13 @@
+.resume-container {
+  display: block;
+  min-height: 100vh;
+  height: 100%;
+  background-image: linear-gradient(0deg, #aab6c7, #e6e9ee);
+  overflow-x: hidden;
+}
+
+.resume-container iframe {
+  width: 100%;
+  height: calc(100vh - 78px);
+  margin-top: 70px;
+}

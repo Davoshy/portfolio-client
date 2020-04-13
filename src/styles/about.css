@@ -1,0 +1,154 @@
+.about-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  min-height: 100vh;
+  height: 100%;
+  background-image: linear-gradient(0deg, #aab6c7, #e6e9ee);
+  overflow-x: hidden;
+}
+
+.about-image {
+  position: relative;
+  top: 85px;
+  height: 180px;
+  width: 180px;
+  border-radius: 50%;
+  border: 5px solid rgba(57, 52, 99, 0.9);
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.8);
+  background-image: url("https://i.ibb.co/NCh7Zt5/bw-selfie.png");
+  background-color: #3e3f40;
+  background-size: 95%;
+  background-position: 75%;
+  background-repeat: no-repeat;
+  justify-self: center;
+  margin: 100px auto 0px auto;
+}
+
+.about-content {
+  color: #333;
+  margin-top: 100px;
+  margin-bottom: 0px;
+  padding: 10px 210px 10px 30px;
+}
+
+.about-content p {
+  line-height: 1.5em;
+}
+
+#about-contact {
+  position: relative;
+  top: 15%;
+  padding-left: 25%;
+}
+
+#about-contact h3 {
+  text-align: center;
+}
+
+#resume #show-btn {
+  position: relative;
+  left: 160px;
+  top: 10px;
+  height: 35px;
+  width: 150px;
+  border: none;
+  border-radius: 10px;
+  font-size: 12px;
+  color: #fff;
+  background-color: rgba(57, 52, 99, 1);
+  box-shadow: 1px 1px 2px #333;
+}
+
+#resume #hide-btn {
+  position: relative;
+  left: 360px;
+  top: 10px;
+  height: 35px;
+  width: 150px;
+  border: none;
+  border-radius: 10px;
+  font-size: 12px;
+  color: #fff;
+  background-color: rgba(57, 52, 99, 1);
+  box-shadow: 1px 1px 2px #333;
+}
+
+#resume button:hover {
+  cursor: pointer;
+}
+
+#choose-resume {
+  color: #000;
+  position: relative;
+  left: 15px;
+}
+
+#choose-resume form {
+  position: relative;
+  left: 150px;
+  top: -24px;
+}
+#choose-resume > label {
+  position: relative;
+  top: -5px;
+  font-size: 16px;
+}
+
+.resume-file {
+  display: none;
+  height: 600px;
+  width: 80%;
+  padding-bottom: 50px;
+  padding-top: 50px;
+}
+
+.resume-file.show {
+  display: block;
+}
+
+.resume-file iframe {
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 875px) {
+  .about-container {
+    grid-template-columns: 1fr 1fr;
+  }
+  .about-image {
+    top: 15%;
+  }
+  .about-content {
+    margin-top: 35%;
+    padding: 10px 15% 10px 30px;
+  }
+  #about-contact {
+    top: 25%;
+  }
+  #about-contact span {
+    line-height: 1.5em;
+  }
+}
+
+@media (max-width: 560px) {
+  .about-container {
+    grid-template-columns: 1fr;
+  }
+  .profile-container {
+    position: relative;
+    top: -50px;
+  }
+  .about-image {
+    margin-bottom: 30px;
+  }
+  .about-content {
+    margin-top: 15%;
+    padding: 10px 8% 10px 10%;
+  }
+  #about-contact {
+    position: relative;
+    top: 15%;
+    justify-content: center;
+    padding-left: 70px;
+  }
+}

@@ -1,5 +1,4 @@
 body {
-  background: rgba(0, 0, 0, 0.9);
   margin: 0;
   color: #fff;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -7,53 +6,6 @@ body {
 
 a {
   text-decoration: none;
-}
-
-nav {
-  display: grid;
-  grid-template-columns: 20% 80%;
-  box-sizing: border-box;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  margin-top: 0;
-  height: 70px;
-  border-bottom: 5px solid #393463;
-  background-color: rgba(92, 133, 168, 0.9);
-  z-index: 99999;
-  padding: 20px 0px 0px 20px;
-  font-size: 20px;
-  align-self: center;
-}
-
-nav .logo {
-  position: absolute;
-  top: 15px;
-  left: 15px;
-  height: 40px;
-  width: 40px;
-  background-image: url("https://imagehost.imageupload.net/2020/03/30/logo_D_D.png");
-  background-size: cover;
-  background-color: rgba(92, 133, 168, 0);
-}
-
-nav div > span {
-  margin-left: 50px;
-  color: #e5e7e8;
-}
-nav a {
-  margin: auto 15px;
-  height: 40px;
-  width: 100px;
-  padding: 8px 25px;
-  border-radius: 40px;
-  color: #e5e7e8;
-  background-color: rgba(92, 133, 168, 0);
-}
-
-nav .nav-pages {
-  position: relative;
-  justify-self: end;
 }
 
 .showcase::after {
@@ -77,7 +29,7 @@ nav .nav-pages {
 
 #btn-contact {
   position: absolute;
-  bottom: 27%;
+  bottom: 20%;
   left: 8%;
   height: 35px;
   width: 200px;
@@ -159,15 +111,16 @@ nav .nav-pages {
 .contact-info,
 .project-form h3 {
   position: relative;
-  left: 10px;
+  top: -10px;
   color: #3a3664;
 }
 
 .contact-info span {
+  line-height: 3em;
   position: relative;
   top: -15px;
-  left: 20px;
-  font-size: 20px;
+  left: 2%;
+  font-size: 16px;
 }
 .content {
   position: absolute;
@@ -214,7 +167,7 @@ nav .nav-pages {
 
 #btn-projects {
   position: absolute;
-  bottom: 27%;
+  bottom: 20%;
   right: 10%;
   height: 35px;
   width: 200px;
@@ -257,14 +210,15 @@ nav .nav-pages {
 .project-form h3 {
   text-align: center;
 }
-.project-form > a {
+.project-form a {
   display: block;
   width: 60%;
-  height: 40px;
+  height: 25px;
   border-radius: 10px;
-  margin: 35px auto;
+  margin: 30px auto;
   text-align: center;
-  padding-top: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
   color: #3a3664;
   background-color: #bdc7d5;
   box-shadow: 0 0 5px #333;
@@ -318,13 +272,38 @@ footer p {
   margin: 0;
 }
 
+/* Medium Screens */
+@media (max-width: 875px) {
+  .contact-form,
+  .project-form,
+  #btn-contact,
+  #btn-projects {
+    display: none;
+  }
+  .showcase::after {
+    height: calc(100vh - 341px - 51px);
+  }
+  .content {
+    width: calc(300px * 0.65);
+    height: calc(350px * 0.65);
+    margin-top: 20px;
+    margin-left: calc(-145px * 0.65);
+  }
+  .content .title {
+    font-size: 30px;
+  }
+  .icons {
+    position: relative;
+    top: 100px;
+  }
+}
 /* Small Screens */
 @media (max-width: 560px) {
   .showcase::after {
-    height: 50vh;
+    height: 64vh;
   }
   .content {
-    top: 5%;
+    top: 12%;
     margin-top: 5px;
   }
   .content .logo {
@@ -334,13 +313,12 @@ footer p {
   .content .text {
     display: none;
   }
-  .grid-3,
-  .grid-2 {
-    grid-template-columns: 1fr;
+  .icons {
+    position: relative;
+    top: 30px;
   }
 
   .services div {
-    border-bottom: #333 dashed 1px;
     padding: 1.2rem 1rem;
   }
 }

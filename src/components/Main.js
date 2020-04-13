@@ -1,5 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
+
+//components
+import Nav from "./Nav";
+
+// Icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faGithub,
@@ -14,8 +20,6 @@ import {
   faPhoneSquare,
   faEnvelope
 } from "@fortawesome/free-solid-svg-icons";
-
-import { Link } from "react-router-dom";
 
 class Main extends React.Component {
   state = {
@@ -32,7 +36,6 @@ class Main extends React.Component {
         classContact: ""
       });
     }
-    console.log(this.state.classContact);
   };
 
   showProjects = () => {
@@ -50,19 +53,7 @@ class Main extends React.Component {
   render() {
     return (
       <>
-        <nav>
-          <div>
-            <div className="logo"></div>
-            <span>Portfolio Page</span>
-          </div>
-          <div className="nav-pages">
-            <a href="/">Home</a>
-            <a href="/about">About Me</a>
-            <a href="/resume">Resume</a>
-            <a href="/contact">Contact</a>
-            <a href="/projects">Projects</a>
-          </div>
-        </nav>
+        <Nav />
         <div className="body">
           <header className="showcase">
             <button onClick={this.showContact} id="btn-contact">
@@ -123,25 +114,27 @@ class Main extends React.Component {
                     style={{ color: "#3a3664" }}
                   />
                 </a>
-                <FontAwesomeIcon
-                  className="icon"
-                  icon={faClipboard}
-                  size="2x"
-                  style={{ color: "#3a3664" }}
-                />
+                <a href="/about">
+                  <FontAwesomeIcon
+                    className="icon"
+                    icon={faClipboard}
+                    size="2x"
+                    style={{ color: "#3a3664" }}
+                  />
+                </a>
               </div>
             </div>
             <div className={`project-form ${this.state.classProjects}`}>
               <h3> Projects </h3>
-              <a href="/projects1" alt="front projects">
+              <a href="/frontapps" alt="front projects">
                 {" "}
-                Front End Challenges
+                Front End
               </a>
-              <a href="/projects2" alt="react projects">
+              <a href="/reactapps" alt="react projects">
                 {" "}
                 React Apps
               </a>
-              <a href="/projects3" alt="game projects">
+              <a href="/games" alt="game projects">
                 {" "}
                 Games
               </a>

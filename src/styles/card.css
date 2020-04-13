@@ -1,37 +1,35 @@
-.projects {
-  margin-bottom: 0px;
-}
-.projects h2 {
-  margin-top: 0px;
+.card-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-items: center;
+  margin: 50px 50px;
+  padding: 0;
+  font-size: 0;
   text-align: center;
-}
-
-.image {
-  border-radius: 6px;
-  height: 160px;
-  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
-  background-color: #8a8a8a;
-  background-size: cover;
-  position: relative;
-  background-repeat: no-repeat;
-  background-position: center;
+  list-style: none;
 }
 
 .card {
   display: inline-block;
   width: 80%;
   border-color: #3a3664;
-  border: 1px solid #3a3664;
   border-radius: 6px;
   max-width: 20rem;
   margin: 20px 0;
   font-size: 1rem;
   text-decoration: none;
   overflow: hidden;
-  box-shadow: 3px 2px 3rem -1rem rgba(122, 118, 181, 0.5);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
   transition: transform 0.1s ease-in-out, box-shadow 0.1s;
   background: #3a3664;
   background-color: #3a3664;
+}
+
+.card h2 {
+  padding-top: 20px;
+  margin-top: 0;
+  margin-bottom: 0;
+  color: #e5e7e8;
 }
 
 .card:hover .hovershow {
@@ -80,7 +78,7 @@
 .card-image {
   display: block;
   min-height: 15rem; /* layout hack */
-  background: #3a3664 center center no-repeat;
+  background: #fff center center no-repeat;
   background-size: cover;
   opacity: 1;
   transition: opacity 0.25s ease-in-out;
@@ -90,37 +88,54 @@
 
 /* Layout Styles */
 
-.card-list {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  justify-items: center;
-  margin: auto;
-  padding: 0;
-  font-size: 0;
-  text-align: center;
-  list-style: none;
-}
-
 .card-description {
-  display: block;
-  padding: 1em 0.5em;
-  color: #e1e5e9;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 0 20px 25px 0;
+  color: #e5e7e8;
   text-decoration: none;
 }
 
-.card-description > h3 {
-  margin: 0 0 0.5em;
-  text-shadow: 4px 4px #333;
+.card-description .desc-item1 {
+  justify-content: flex-start;
+  padding-top: 10px;
+  margin-left: 15px;
 }
 
-.card-description > p {
-  margin: 0;
+.card-description .desc-item2 {
+  justify-content: flex-end;
+  margin-left: 5px;
+}
+
+.card-description h5 {
+  font-size: 14px;
+  text-align: left;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.card-description span {
+  position: relative;
+  display: block;
+  font-size: 14px;
+  top: 20px;
+  margin-left: 25px;
+  margin-bottom: 10px;
+  text-align: left;
 }
 
 /* Medium Screens */
-@media (max-width: 800px) {
+@media (max-width: 875px) {
   .card-list {
     grid-template-columns: 1fr 1fr;
+  }
+  .card .hovershow {
+    display: block;
+    position: relative;
+    margin: 20px auto;
+    height: 100%;
+    width: 100%;
   }
 }
 

@@ -1,0 +1,144 @@
+nav {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  margin-top: 0;
+  height: 70px;
+  border-bottom: 5px solid #393463;
+  background-color: rgba(92, 133, 168, 0.9);
+  z-index: 99999;
+  font-size: 20px;
+  align-self: center;
+}
+#portfolio-page {
+  position: relative;
+  left: 30px;
+}
+
+#drop-projects {
+  margin-top: 0;
+}
+#drop-projects .drop-down {
+  display: none;
+  position: absolute;
+  top: 70px;
+  padding: 0px;
+  margin: 0px;
+  right: -100px;
+  height: 177px;
+  width: 300px;
+  background-color: rgba(57, 52, 99, 0.9);
+}
+
+nav #drop-projects:hover .drop-down {
+  display: block;
+  z-index: 99999;
+}
+
+nav .drop-down .drop-items {
+  display: block;
+  position: relative;
+  font-size: 16px;
+  top: -3px;
+  width: 100%;
+  height: 40px;
+  margin: 0;
+  padding: 20px 10px 0px 20px;
+  color: #e5e7e8;
+}
+
+.drop-items:hover {
+  background-color: rgba(57, 52, 99, 1);
+}
+
+nav .logo {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  height: 40px;
+  width: 40px;
+  background-image: url("https://imagehost.imageupload.net/2020/03/30/logo_D_D.png");
+  background-size: cover;
+  background-color: rgba(92, 133, 168, 0);
+}
+
+nav div > span {
+  position: relative;
+  top: 20px;
+  left: 70px;
+  color: #e5e7e8;
+}
+nav .nav-items {
+  box-sizing: content-box;
+  position: relative;
+  top: 20px;
+  margin: 0;
+  height: 70px;
+  width: 100px;
+  padding: 22px 40px;
+  color: #e5e7e8;
+  background-color: rgba(92, 133, 168, 0);
+}
+
+nav .nav-pages .nav-items:hover {
+  background-color: rgba(57, 52, 99, 0.6);
+}
+
+nav .responsive {
+  display: none;
+  position: absolute;
+  top: -5px;
+  right: 5px;
+}
+
+.menu.show {
+  display: block;
+}
+
+nav .menu {
+  display: none;
+  position: relative;
+  top: 65px;
+  height: calc(100vh - 341px - 51px - 65px);
+  width: 50vw;
+  border: 1px solid #333;
+  background-color: rgba(57, 52, 99, 0.8);
+}
+
+nav .menu-items {
+  display: block;
+  position: relative;
+  text-align: center;
+  font-size: 20px;
+  top: -3px;
+  height: 40px;
+  padding-top: 10%;
+  color: #fff;
+}
+
+nav .menu-items:hover {
+  color: #333;
+}
+
+nav .nav-pages {
+  position: relative;
+  justify-self: end;
+}
+
+@media (max-width: 875px) {
+  nav .nav-items {
+    display: none;
+  }
+  nav .responsive {
+    display: block;
+  }
+}
+
+@media (max-width: 560px) {
+  nav .menu {
+    height: 48vh;
+  }
+}
